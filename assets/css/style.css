@@ -1,0 +1,34 @@
+input{
+	width:45px;
+	height: 35px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	text-indent: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+.row{
+    float: none;
+    width: 90%;
+}
+.board{
+	display: block;
+	margin-right: 20%;
+	margin-left: 20%;
+	width: 520px;
+}
+
+.rowThree{
+	border-bottom: 5px solid black;
+}
+
+.rowSix{
+		border-bottom: 5px solid black;
+}
+
+.divider{
+	border-right: 5px solid black;
+}

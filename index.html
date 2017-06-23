@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sudoku Solver">
+    <meta name="author" content="Grey Martin">
+
+    <title>Sudoku Solver</title>
+
+   <!--  css -->
+   <link href= "assets/css/reset.css" rel="stylesheet" type="text/css">
+   	<link href= "assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body> 
+	<h1> Sudoku Solver!</h1>
+	<h2> Just plug in the puzzle and leave the unknown cells as zeros</h2>
+	<div class= "board">
+		<div class= "row rowOne">
+			<input type= "number" value="0" id= "0" name= "oneOne">
+			<input type= "number" value="0" id= "1" name= "oneTwo" >
+			<input type= "number" value="0" id= "2" name= "oneThree" class= "divider">
+			<input type= "number" value="0" id= "3" name= "oneFour">
+			<input type= "number" value="0" id= "4" name= "oneFive">
+			<input type= "number" value="0" id= "5" name= "oneSix" class= "divider">
+			<input type= "number" value="0" id= "6" name= "oneSeven" >
+			<input type= "number" value="0" id= "7" name= "oneEight">
+			<input type= "number" value="0" id= "8" name= "oneNine">
+		</div>
+		<div class= "row rowTwo">
+			<input type= "number" value="0" id= "9" name= "twoOne">
+			<input type= "number" value="0" id= "10" name= "twoTwo">
+			<input type= "number" value="0" id= "11" name= "twoThree" class= "divider">
+			<input type= "number" value="0" id= "12" name= "twoFour">
+			<input type= "number" value="0" id= "13" name= "twoFive">
+			<input type= "number" value="0" id= "14" name= "twoSix" class= "divider">
+			<input type= "number" value="0" id= "15" name= "twoSeven">
+			<input type= "number" value="0" id= "16" name= "twoEight">
+			<input type= "number" value="0" id= "17" name= "twoNine">
+		</div>
+		<div class= "row rowThree">
+			<input type= "number" value="0" id= "18" name= "threeOne">
+			<input type= "number" value="0" id= "19" name= "threeTwo">
+			<input type= "number" value="0" id= "20" name= "threeThree" class= "divider">
+			<input type= "number" value="0" id= "21" name= "threeFour">
+			<input type= "number" value="0" id= "22" name= "threeFive">
+			<input type= "number" value="0" id= "23" name= "threeSix" class= "divider">
+			<input type= "number" value="0" id= "24" name= "threeSeven">
+			<input type= "number" value="0" id= "25" name= "threeEight">
+			<input type= "number" value="0" id= "26" name= "threeNine">
+		</div>
+			<div class= "row rowFour">
+			<input type= "number" value="0" id= "27" name= "fourOne">
+			<input type= "number" value="0" id= "28" name= "fourTwo">
+			<input type= "number" value="0" id= "29" name= "fourThree" class= "divider">
+			<input type= "number" value="0" id= "30" name= "fourFour">
+			<input type= "number" value="0" id= "31" name= "fourFive">
+			<input type= "number" value="0" id= "32" name= "fourSix" class= "divider">
+			<input type= "number" value="0" id= "33" name= "fourSeven">
+			<input type= "number" value="0" id= "34" name= "fourEight">
+			<input type= "number" value="0" id= "35" name= "fourNine">
+		</div>
+		<div class= "row rowFive">
+			<input type= "number" value="0" id= "36" name= "fiveOne">
+			<input type= "number" value="0" id= "37" name= "fiveTwo">
+			<input type= "number" value="0" id= "38" name= "fiveThree" class= "divider">
+			<input type= "number" value="0" id= "39" name= "fiveFour">
+			<input type= "number" value="0" id= "40" name= "fiveFive">
+			<input type= "number" value="0" id= "41" name= "fiveSix" class= "divider">
+			<input type= "number" value="0" id= "42" name= "fiveSeven">
+			<input type= "number" value="0" id= "43" name= "fiveEight">
+			<input type= "number" value="0" id= "44" name= "fiveNine">
+		</div>
+		<div class= "row rowSix">
+			<input type= "number" value="0" id= "45" name= "sixOne">
+			<input type= "number" value="0" id= "46" name= "sixTwo">
+			<input type= "number" value="0" id= "47" name= "sixThree" class= "divider">
+			<input type= "number" value="0" id= "48" name= "sixFour">
+			<input type= "number" value="0" id= "49" name= "sixFive">
+			<input type= "number" value="0" id= "50" name= "sixSix" class= "divider">
+			<input type= "number" value="0" id= "51" name= "sixSeven">
+			<input type= "number" value="0" id= "52" name= "sixEight">
+			<input type= "number" value="0" id= "53" name= "sixNine">
+		</div>
+		<div class= "row rowSeven">
+			<input type= "number" value="0" id= "54" name= "sevenOne">
+			<input type= "number" value="0" id= "55" name= "sevenTwo">
+			<input type= "number" value="0" id= "56" name= "sevenThree" class= "divider">
+			<input type= "number" value="0" id= "57" name= "sevenFour">
+			<input type= "number" value="0" id= "58" name= "sevenFive">
+			<input type= "number" value="0" id= "59" name= "sevenSix" class= "divider">
+			<input type= "number" value="0" id= "60" name= "sevenSeven">
+			<input type= "number" value="0" id= "61" name= "sevenEight">
+			<input type= "number" value="0" id= "62" name= "sevenNine">
+		</div>
+		<div class= "row rowEight">
+			<input type= "number" value="0" id= "63" name= "eightOne">
+			<input type= "number" value="0" id= "64" name= "eightTwo">
+			<input type= "number" value="0" id= "65" name= "eightThree" class= "divider">
+			<input type= "number" value="0" id= "66" name= "eightFour">
+			<input type= "number" value="0" id= "67" name= "eightFive">
+			<input type= "number" value="0" id= "68" name= "eightSix" class= "divider">
+			<input type= "number" value="0" id= "69" name= "eightSeven">
+			<input type= "number" value="0" id= "70" name= "eightEight">
+			<input type= "number" value="0" id= "71" name= "eightNine">
+		</div>
+		<div class= "row rowNine">
+			<input type= "number" value="0" id= "72" name= "nineOne">
+			<input type= "number" value="0" id= "73" name= "nineTwo">
+			<input type= "number" value="0" id= "74" name= "nineThree" class= "divider">
+			<input type= "number" value="0" id= "75" name= "nineFour">
+			<input type= "number" value="0" id= "76" name= "nineFive">
+			<input type= "number" value="0" id= "77" name= "nineSix" class= "divider">
+			<input type= "number" value="0" id= "78" name= "nineSeven">
+			<input type= "number" value="0" id= "79" name= "nineEight">
+			<input type= "number" value="0" id= "80" name= "nineNine">
+		</div>
+
+			<button class="submit"> Submit</button><button class="calculate"> Calculate</button><button class="columns"> Columns</button>			<button class="arrays"> arrays</button>
+			<button class="sets"> Set</button>
+			<button class="buildPotential"> buildPotential</button>
+			<button class="evaulatePotential""> evaluatePotential</button>
+			<button class="createAnswer"> createAnswer</button>
+	</div>
+	<script src="js/jquery.min.js"></script>
+ <script src="js/solver.js"></script>
+</body>
+</html>
