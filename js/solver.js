@@ -51,61 +51,63 @@ $(".submit").click(function(){
 
 		for( var i = 0; i<81; i++){
 			var entry= parseInt(document.getElementsByTagName("input")[i].value);
-			if (i<9){
-			rowOne.push(entry);
-			potentialReference[i] = [0];
-			rowRelated[0].push(i);
-			}
-			else if (i<18){
-			rowTwo.push(entry);
-			potentialReference[i] = [1];
-			rowRelated[1].push(i);
-			}
-			else if (i<27){
-			rowThree.push(entry);
-			potentialReference[i] = [2];
-			rowRelated[2].push(i);
-			}
-			else if (i<36){
-			rowFour.push(entry);
-			potentialReference[i] = [3];
-			rowRelated[3].push(i);
-			}
-			else if (i<45){
-			rowFive.push(entry);
-			potentialReference[i] = [4];
-			rowRelated[4].push(i);
-			}
-			else if (i<54){
-			rowSix.push(entry);
-			potentialReference[i] = [5];
-			rowRelated[5].push(i);
-			}
-			else if (i<63){
-			rowSeven.push(entry);
-			potentialReference[i] = [6];
-			rowRelated[6].push(i);
-			}
-			else if (i<72){
-			rowEight.push(entry);
-			potentialReference[i] = [7];
-			rowRelated[7].push(i);
-			}
-			else if (i<81){
-			rowNine.push(entry);
-			potentialReference[i] = [8];
-			rowRelated[8].push(i);
-			}
-			else {
-				console.log("error in entry");
-			}
+
+				entry = 0;
+				if (i<9){
+				rowOne.push(entry);
+				potentialReference[i] = [0];
+				rowRelated[0].push(i);
+				}
+				else if (i<18){
+				rowTwo.push(entry);
+				potentialReference[i] = [1];
+				rowRelated[1].push(i);
+				}
+				else if (i<27){
+				rowThree.push(entry);
+				potentialReference[i] = [2];
+				rowRelated[2].push(i);
+				}
+				else if (i<36){
+				rowFour.push(entry);
+				potentialReference[i] = [3];
+				rowRelated[3].push(i);
+				}
+				else if (i<45){
+				rowFive.push(entry);
+				potentialReference[i] = [4];
+				rowRelated[4].push(i);
+				}
+				else if (i<54){
+				rowSix.push(entry);
+				potentialReference[i] = [5];
+				rowRelated[5].push(i);
+				}
+				else if (i<63){
+				rowSeven.push(entry);
+				potentialReference[i] = [6];
+				rowRelated[6].push(i);
+				}
+				else if (i<72){
+				rowEight.push(entry);
+				potentialReference[i] = [7];
+				rowRelated[7].push(i);
+				}
+				else if (i<81){
+				rowNine.push(entry);
+				potentialReference[i] = [8];
+				rowRelated[8].push(i);
+				}
+				else {
+					console.log("error in entry");
+				}
 		} 
 			
 	}
 
 );
 
-$(".calculate").click(function(){
+$(".submit").click(function(){
 	for (var u =0; u<81; u++ ){
 		totalModel.push(parseInt(document.getElementsByTagName("input")[u].value));
 	}
@@ -113,7 +115,7 @@ $(".calculate").click(function(){
 	console.log(totalModel);
 });
 
-$(".columns").click(function(){
+$(".submit").click(function(){
 	for( var y=0; y<9; y++){
 		for (var t = 0; t<81; t = t+9){
 			var position= (t+y);
@@ -167,7 +169,7 @@ $(".columns").click(function(){
 	console.log("columnOne: " + colOne);
 });
 
-$(".arrays").click(function(){
+$(".submit").click(function(){
 
 	rowArray[0] = rowOne;
 	rowArray[1] = rowTwo;
@@ -189,11 +191,11 @@ $(".arrays").click(function(){
 	colArray[7] = colEight;
 	colArray[8] = colNine;
 
-	console.log(colArray);
+	console.log("colArray", colArray);
 	console.log(rowArray);
 });
 
-$(".sets").click(function(){
+$(".submit").click(function(){
 	var position=0;
 	var horizontalNumber= 0;
 	var verticalNumber= 0;
@@ -237,7 +239,7 @@ $(".sets").click(function(){
 });
 
 
-$(".buildPotential").click(function(){
+$(".submit").click(function(){
 	for (var u=0; u<81; u++){
 		if (totalModel[u] !== 0){
 			potentialAnswers[u] = [parseInt(totalModel[u])]
@@ -255,7 +257,7 @@ $(".buildPotential").click(function(){
 
 });
 
-$(".evaulatePotential").click(function(){
+$(".sumbit").click(function(){
 
 	for( var i=0; i<81; i++){
 		for(var y = 0 ; y< 9; y++){
@@ -292,12 +294,17 @@ $(".evaulatePotential").click(function(){
 var rowHolder= [];
 var colHolder= [];
 var setHolder= [];
+var filled = [];
+var macro= 0;
 $(".createAnswer").click(function(){
+	while (filled.length< 81 && macro < 50 ){
+		macro++;
 	for(var i = 0 ; i<81; i++){
 		console.log("first", i, "set", potentialAnswers[i])
-		if(potentialAnswers[i].length === 1){
+		if(potentialAnswers[i].length === 1 && filled.indexOf(i) === -1){
 			console.log("filled : " + potentialAnswers[i][0] + " at " + i);
 			$('#'+i ).attr('value', potentialAnswers[i][0]);
+			filled.push(i);
 
 			for (var u= 0; u<81; u++){
 				for (var d = 0;  d<3; d++){
@@ -305,6 +312,7 @@ $(".createAnswer").click(function(){
 						if(potentialAnswers[u].indexOf(parseInt(potentialAnswers[i][0])) > -1){
 							var existsWhere = potentialAnswers[u].indexOf(potentialAnswers[i][0]);
 							potentialAnswers[u].splice(existsWhere,1);
+							
 							console.log(" cut : cell ", u , "is now ", potentialAnswers[u], "because", i, "is", potentialAnswers[i]);
 						}
 					}
@@ -375,8 +383,7 @@ $(".createAnswer").click(function(){
 								}
 							}
 						}
-						else if (d === 2 && potentialAnswers[i].length !== 1 ){
-							
+						else if (d === 2 && potentialAnswers[i].length !== 1 ){	
 							console.log("set setHolder as", potentialAnswers[i], " & ", setHolder,' at ', i)
 							var counter=0;
 							for(var y = 0; y<9; y++){
@@ -408,5 +415,5 @@ $(".createAnswer").click(function(){
 			} console.log(potentialAnswers);
 		}
 	
-);
+});
 

@@ -13,120 +13,186 @@
    <!--  css -->
    <link href= "assets/css/reset.css" rel="stylesheet" type="text/css">
    	<link href= "assets/css/style.css" rel="stylesheet" type="text/css">
+   	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 
 <body> 
 	<h1> Sudoku Solver!</h1>
 	<h2> Just plug in the puzzle and leave the unknown cells as zeros</h2>
-	<div class= "board">
-		<div class= "row rowOne">
-			<input type= "number" value="0" id= "0" name= "oneOne">
-			<input type= "number" value="0" id= "1" name= "oneTwo" >
-			<input type= "number" value="0" id= "2" name= "oneThree" class= "divider">
-			<input type= "number" value="0" id= "3" name= "oneFour">
-			<input type= "number" value="0" id= "4" name= "oneFive">
-			<input type= "number" value="0" id= "5" name= "oneSix" class= "divider">
-			<input type= "number" value="0" id= "6" name= "oneSeven" >
-			<input type= "number" value="0" id= "7" name= "oneEight">
-			<input type= "number" value="0" id= "8" name= "oneNine">
-		</div>
-		<div class= "row rowTwo">
-			<input type= "number" value="0" id= "9" name= "twoOne">
-			<input type= "number" value="0" id= "10" name= "twoTwo">
-			<input type= "number" value="0" id= "11" name= "twoThree" class= "divider">
-			<input type= "number" value="0" id= "12" name= "twoFour">
-			<input type= "number" value="0" id= "13" name= "twoFive">
-			<input type= "number" value="0" id= "14" name= "twoSix" class= "divider">
-			<input type= "number" value="0" id= "15" name= "twoSeven">
-			<input type= "number" value="0" id= "16" name= "twoEight">
-			<input type= "number" value="0" id= "17" name= "twoNine">
-		</div>
-		<div class= "row rowThree">
-			<input type= "number" value="0" id= "18" name= "threeOne">
-			<input type= "number" value="0" id= "19" name= "threeTwo">
-			<input type= "number" value="0" id= "20" name= "threeThree" class= "divider">
-			<input type= "number" value="0" id= "21" name= "threeFour">
-			<input type= "number" value="0" id= "22" name= "threeFive">
-			<input type= "number" value="0" id= "23" name= "threeSix" class= "divider">
-			<input type= "number" value="0" id= "24" name= "threeSeven">
-			<input type= "number" value="0" id= "25" name= "threeEight">
-			<input type= "number" value="0" id= "26" name= "threeNine">
-		</div>
-			<div class= "row rowFour">
-			<input type= "number" value="0" id= "27" name= "fourOne">
-			<input type= "number" value="0" id= "28" name= "fourTwo">
-			<input type= "number" value="0" id= "29" name= "fourThree" class= "divider">
-			<input type= "number" value="0" id= "30" name= "fourFour">
-			<input type= "number" value="0" id= "31" name= "fourFive">
-			<input type= "number" value="0" id= "32" name= "fourSix" class= "divider">
-			<input type= "number" value="0" id= "33" name= "fourSeven">
-			<input type= "number" value="0" id= "34" name= "fourEight">
-			<input type= "number" value="0" id= "35" name= "fourNine">
-		</div>
-		<div class= "row rowFive">
-			<input type= "number" value="0" id= "36" name= "fiveOne">
-			<input type= "number" value="0" id= "37" name= "fiveTwo">
-			<input type= "number" value="0" id= "38" name= "fiveThree" class= "divider">
-			<input type= "number" value="0" id= "39" name= "fiveFour">
-			<input type= "number" value="0" id= "40" name= "fiveFive">
-			<input type= "number" value="0" id= "41" name= "fiveSix" class= "divider">
-			<input type= "number" value="0" id= "42" name= "fiveSeven">
-			<input type= "number" value="0" id= "43" name= "fiveEight">
-			<input type= "number" value="0" id= "44" name= "fiveNine">
-		</div>
-		<div class= "row rowSix">
-			<input type= "number" value="0" id= "45" name= "sixOne">
-			<input type= "number" value="0" id= "46" name= "sixTwo">
-			<input type= "number" value="0" id= "47" name= "sixThree" class= "divider">
-			<input type= "number" value="0" id= "48" name= "sixFour">
-			<input type= "number" value="0" id= "49" name= "sixFive">
-			<input type= "number" value="0" id= "50" name= "sixSix" class= "divider">
-			<input type= "number" value="0" id= "51" name= "sixSeven">
-			<input type= "number" value="0" id= "52" name= "sixEight">
-			<input type= "number" value="0" id= "53" name= "sixNine">
-		</div>
-		<div class= "row rowSeven">
-			<input type= "number" value="0" id= "54" name= "sevenOne">
-			<input type= "number" value="0" id= "55" name= "sevenTwo">
-			<input type= "number" value="0" id= "56" name= "sevenThree" class= "divider">
-			<input type= "number" value="0" id= "57" name= "sevenFour">
-			<input type= "number" value="0" id= "58" name= "sevenFive">
-			<input type= "number" value="0" id= "59" name= "sevenSix" class= "divider">
-			<input type= "number" value="0" id= "60" name= "sevenSeven">
-			<input type= "number" value="0" id= "61" name= "sevenEight">
-			<input type= "number" value="0" id= "62" name= "sevenNine">
-		</div>
-		<div class= "row rowEight">
-			<input type= "number" value="0" id= "63" name= "eightOne">
-			<input type= "number" value="0" id= "64" name= "eightTwo">
-			<input type= "number" value="0" id= "65" name= "eightThree" class= "divider">
-			<input type= "number" value="0" id= "66" name= "eightFour">
-			<input type= "number" value="0" id= "67" name= "eightFive">
-			<input type= "number" value="0" id= "68" name= "eightSix" class= "divider">
-			<input type= "number" value="0" id= "69" name= "eightSeven">
-			<input type= "number" value="0" id= "70" name= "eightEight">
-			<input type= "number" value="0" id= "71" name= "eightNine">
-		</div>
-		<div class= "row rowNine">
-			<input type= "number" value="0" id= "72" name= "nineOne">
-			<input type= "number" value="0" id= "73" name= "nineTwo">
-			<input type= "number" value="0" id= "74" name= "nineThree" class= "divider">
-			<input type= "number" value="0" id= "75" name= "nineFour">
-			<input type= "number" value="0" id= "76" name= "nineFive">
-			<input type= "number" value="0" id= "77" name= "nineSix" class= "divider">
-			<input type= "number" value="0" id= "78" name= "nineSeven">
-			<input type= "number" value="0" id= "79" name= "nineEight">
-			<input type= "number" value="0" id= "80" name= "nineNine">
-		</div>
+	<h2> Click Submit when all starting values are entered and Create Answer for a Solution</h2>
+	<h2> It works on easy to medium difficulty puzzles and will exit out of puzzles it cannot solve</h2>
+	<h2> Working on complete solver currently</h2>
 
-			<button class="submit"> Submit</button><button class="calculate"> Calculate</button><button class="columns"> Columns</button>			<button class="arrays"> arrays</button>
-			<button class="sets"> Set</button>
-			<button class="buildPotential"> buildPotential</button>
-			<button class="evaulatePotential""> evaluatePotential</button>
-			<button class="createAnswer"> createAnswer</button>
+
+	<table class= "board">
+		<tr class= "row rowOne">
+			<td><input type= "number" max="1" value="0" id= "0" name= "oneOne"></td>
+			<td><input type= "number" max="1" value="0" id= "1" name= "oneTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "2" name= "oneThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "3" name= "oneFour"></td>
+			<td><input type= "number" max="1" value="0" id= "4" name= "oneFive"></td>
+			<td><input type= "number" max="1" value="0" id= "5" name= "oneSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "6" name= "oneSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "7" name= "oneEight"></td>
+			<td><input type= "number" max="1" value="0" id= "8" name= "oneNine"></td>
+		</tr>
+		<tr class= "row rowTwo">
+			<td><input type= "number" max="1" value="0" id= "9" name= "twoOne"></td>
+			<td><input type= "number" max="1" value="0" id= "10" name= "twoTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "11" name= "twoThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "12" name= "twoFour"></td>
+			<td><input type= "number" max="1" value="0" id= "13" name= "twoFive"></td>
+			<td><input type= "number" max="1" value="0" id= "14" name= "twoSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "15" name= "twoSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "16" name= "twoEight"></td>
+			<td><input type= "number" max="1" value="0" id= "17" name= "twoNine"></td>
+		</tr>
+		<tr class= "row rowThree">
+			<td><input type= "number" max="1" value="0" id= "18" name= "threeOne"></td>
+			<td><input type= "number" max="1" value="0" id= "19" name= "threeTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "20" name= "threeThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "21" name= "threeFour"></td>
+			<td><input type= "number" max="1" value="0" id= "22" name= "threeFive"></td>
+			<td><input type= "number" max="1" value="0" id= "23" name= "threeSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "24" name= "threeSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "25" name= "threeEight"></td>
+			<td><input type= "number" max="1" value="0" id= "26" name= "threeNine"></td>
+		</tr>
+			<tr class= "row rowFour">
+			<td><input type= "number" max="1" value="0" id= "27" name= "fourOne"></td>
+			<td><input type= "number" max="1" value="0" id= "28" name= "fourTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "29" name= "fourThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "30" name= "fourFour"></td>
+			<td><input type= "number" max="1" value="0" id= "31" name= "fourFive"></td>
+			<td><input type= "number" max="1" value="0" id= "32" name= "fourSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "33" name= "fourSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "34" name= "fourEight"></td>
+			<td><input type= "number" max="1" value="0" id= "35" name= "fourNine"></td>
+		</tr>
+		<tr class= "row rowFive">
+			<td><input type= "number" max="1" value="0" id= "36" name= "fiveOne"></td>
+			<td><input type= "number" max="1" value="0" id= "37" name= "fiveTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "38" name= "fiveThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "39" name= "fiveFour"></td>
+			<td><input type= "number" max="1" value="0" id= "40" name= "fiveFive"></td>
+			<td><input type= "number" max="1" value="0" id= "41" name= "fiveSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "42" name= "fiveSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "43" name= "fiveEight"></td>
+			<td><input type= "number" max="1" value="0" id= "44" name= "fiveNine"></td>
+		</tr>
+		<tr class= "row rowSix">
+			<td><input type= "number" max="1" value="0" id= "45" name= "sixOne"></td>
+			<td><input type= "number" max="1" value="0" id= "46" name= "sixTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "47" name= "sixThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "48" name= "sixFour"></td>
+			<td><input type= "number" max="1" value="0" id= "49" name= "sixFive"></td>
+			<td><input type= "number" max="1" value="0" id= "50" name= "sixSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "51" name= "sixSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "52" name= "sixEight"></td>
+			<td><input type= "number" max="1" value="0" id= "53" name= "sixNine"></td>
+		</tr>
+		<tr class= "row rowSeven">
+			<td><input type= "number" max="1" value="0" id= "54" name= "sevenOne"></td>
+			<td><input type= "number" max="1" value="0" id= "55" name= "sevenTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "56" name= "sevenThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "57" name= "sevenFour"></td>
+			<td><input type= "number" max="1" value="0" id= "58" name= "sevenFive"></td>
+			<td><input type= "number" max="1" value="0" id= "59" name= "sevenSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "60" name= "sevenSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "61" name= "sevenEight"></td>
+			<td><input type= "number" max="1" value="0" id= "62" name= "sevenNine"></td>
+		</tr>
+		<tr class= "row rowEight">
+			<td><input type= "number" max="1" value="0" id= "63" name= "eightOne"></td>
+			<td><input type= "number" max="1" value="0" id= "64" name= "eightTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "65" name= "eightThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "66" name= "eightFour"></td>
+			<td><input type= "number" max="1" value="0" id= "67" name= "eightFive"></td>
+			<td><input type= "number" max="1" value="0" id= "68" name= "eightSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "69" name= "eightSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "70" name= "eightEight"></td>
+			<td><input type= "number" max="1" value="0" id= "71" name= "eightNine"></td>
+		</tr>
+		<tr class= "row rowNine">
+			<td><input type= "number" max="1" value="0" id= "72" name= "nineOne"></td>
+			<td><input type= "number" max="1" value="0" id= "73" name= "nineTwo"></td>
+			<td><input type= "number" max="1" value="0" id= "74" name= "nineThree" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "75" name= "nineFour"></td>
+			<td><input type= "number" max="1" value="0" id= "76" name= "nineFive"></td>
+			<td><input type= "number" max="1" value="0" id= "77" name= "nineSix" class= "divider"></td>
+			<td><input type= "number" max="1" value="0" id= "78" name= "nineSeven"></td>
+			<td><input type= "number" max="1" value="0" id= "79" name= "nineEight"></td>
+			<td><input type= "number" max="1" value="0" id= "80" name= "nineNine"></td>
+		</tr>
+		<button class="submit"> Submit</button>
+		<button class="createAnswer"> Create Answer</button>
+	</table>
+	<div>
+
 	</div>
+
 	<script src="js/jquery.min.js"></script>
  <script src="js/solver.js"></script>
+ 	 <script>
+
+$('input[type="number"]').each(function(){
+	$(this).on('keyup', function(){
+		console.log(this);
+		if ($(this).val().length > 1 ) {
+          val=$(this).val().slice(0, 1);
+          $(this).val(val);
+        }
+	});
+		// $(this).on('click', function(this){
+		// var id= parseInt(e.target.id);
+		// console.log("click", this);
+		// document.getElementById(id).focus();
+  //       });
+});
+
+$(document).ready(function() { 
+	document.getElementById(0).focus();
+});
+
+$('input').on( "click", function(e){
+	e.preventDefault()
+	var id= parseInt(e.target.id);
+	var selection = document.getElementById(id)
+	selection.focus();
+	selection.setSelectionRange(0,0);
+})
+
+
+
+$('input').on('keydown', function(e) {
+ 	var id= parseInt(e.target.id);
+ 	if (e.keyCode === 37){
+ 		e.preventDefault()
+ 		id-=1
+ 		document.getElementById(id).focus();
+
+ 	}
+
+	else if ( e.keyCode === 39){
+		e.preventDefault()
+        id+=1
+ 		document.getElementById(id).focus();
+ 	}
+ 	else if (e.keyCode === 38 ){
+ 		e.preventDefault()
+ 		id-=9
+ 		document.getElementById(id).focus();
+ 	}
+ 	else if (e.keyCode === 40){
+ 		e.preventDefault()
+ 		id+=9
+ 		document.getElementById(id).focus();
+ 	}
+
+    
+});
+;</script>
+
 </body>
 </html>
